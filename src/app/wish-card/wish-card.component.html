@@ -8,7 +8,7 @@
         Wishing you and your family peace, happiness and prosperity this new year.
       </div>
       <div class="card-author">
-        {{ username }}
+        From {{ username }}
       </div>
     </div>
     <div class="form-container">
@@ -17,7 +17,7 @@
       </div>
       <form [formGroup]="form">
         <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()" placeholder="Enter your name here">
-        <a href="whatsapp://send?text=http://jubileehills.info/card/{{this.form.value.username}}" data-action="share/whatsapp/share">Send</a>
+        <a href="whatsapp://send?text=http://jubileehills.info/card/{{this.form.value.username}}" data-action="share/whatsapp/share">SEND</a>
       </form>
     </div>
     

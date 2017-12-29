@@ -1,16 +1,4 @@
-*  {
-    font-family: 'Lato', 'Helvetica', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  html, body  {
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-  }
-  
+
   .page-container  {
     height: 100%;
     min-height: 100%;
@@ -52,10 +40,15 @@
     line-height: 1.5;
     font-size: 18px;
     margin-bottom: 20px;
+    margin-top: 10px;
   }
   
+  .card-img  {
+    text-align: center;
+  }
+
   .card-img img  {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
   }
   
@@ -63,17 +56,20 @@
     padding: 10px;
     width: 100%;
     text-align: center;
-    height: 80px;
+    height: 100px;
+    margin-bottom: 20px;
   }
   
-  .form-container input[type="text"]  {
+  .form-container form input[type="text"]  {
     min-width: 50%;
     font-size: 16px;
     padding: 6px 14px;
     border-radius: 4px;
+    outline: none;
   }
   
-  .form-container input[type="submit"]  {
+  .form-container form a  {
+    display: inline-block;
     font-size: 16px;
     padding: 8px 16px;
     -webkit-appearance: none;
@@ -82,11 +78,15 @@
     border: none;
     border-radius: 4px;
     margin-left: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #EA0055;
+    line-height: 19px;
   }
   
-  .form-container input[type="submit"]:hover  {
-    background-color: #EA0055;
-    color: #fff;
+  .form-container form a:hover  {
+    background-color: #FFD113;
+    color: #140F29;
   }
   
   .form-text  {
