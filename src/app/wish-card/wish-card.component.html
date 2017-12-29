@@ -1,0 +1,31 @@
+<div class="page-container">
+  <div class="card-container">
+    <div class="card-img">
+      <img src="../assets/happy_new_year.png" alt="happy new year">
+    </div>
+    <div class="card-content">
+      <div class="card-text">
+        Wishing you and your family peace, happiness and prosperity this new year.
+      </div>
+      <div class="card-author">
+        {{ username }}
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="form-text">
+        Personalize this card and send to your friends.
+      </div>
+      <form [formGroup]="form">
+        <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()" placeholder="Enter your name here">
+        <a href="whatsapp://send?text=http://jubileehills.info/card/{{this.form.value.username}}" data-action="share/whatsapp/share">Send</a>
+      </form>
+    </div>
+    
+    <div class="credits">
+      Made with  <i class="fa fa-heart"></i>  by <a href="http://greythinklabs.com">GreyThink Labs</a>
+    </div>
+    <div class="citations">
+      <a href="citations.html"></a>
+    </div>
+  </div>
+</div>
