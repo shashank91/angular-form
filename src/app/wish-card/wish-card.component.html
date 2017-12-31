@@ -11,7 +11,8 @@
         From {{ username }}
       </div>
     </div>
-    <div class="form-container">
+
+    <!-- <div class="form-container">
       <div class="form-text">
         Personalize this card and send to your friends.
       </div>
@@ -19,6 +20,30 @@
         <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()" placeholder="Enter your name here">
         <a href="whatsapp://send?text=http://jubileehills.info/card/{{this.form.value.username}}" data-action="share/whatsapp/share">SEND</a>
       </form>
+    </div> -->
+
+    <div class="form-container" *ngIf="createCard">
+      <div class="form-text">
+        Personalize this card and send to your friends.
+      </div>
+      <form [formGroup]="form">
+        <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()" placeholder="Enter your name here">
+        <input type="submit" (click)="shareCard()" value="Submit">
+      </form>
+    </div>
+
+    <div class="form-container" *ngIf="!createCard">
+      <div class="form-text">
+        Share on Whatsapp and Facebook
+      </div>
+      <div class="share-buttons">
+        <div class="whatsapp-share">
+          <a [href]="cardUrl" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> Whatsapp</a>
+        </div>
+        <div class="fb-share">
+          <a><i class="fa fa-facebook"></i> Facebook</a>
+        </div>
+      </div>
     </div>
     
     <div class="credits">
