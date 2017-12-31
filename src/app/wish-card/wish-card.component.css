@@ -40,15 +40,10 @@
     line-height: 1.5;
     font-size: 18px;
     margin-bottom: 20px;
-    margin-top: 10px;
   }
   
-  .card-img  {
-    text-align: center;
-  }
-
   .card-img img  {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
   }
   
@@ -56,20 +51,17 @@
     padding: 10px;
     width: 100%;
     text-align: center;
-    height: 100px;
-    margin-bottom: 20px;
+    height: 80px;
   }
   
-  .form-container form input[type="text"]  {
+  .form-container input[type="text"]  {
     min-width: 50%;
     font-size: 16px;
     padding: 6px 14px;
     border-radius: 4px;
-    outline: none;
   }
   
-  .form-container form a  {
-    display: inline-block;
+  .form-container input[type="submit"]  {
     font-size: 16px;
     padding: 8px 16px;
     -webkit-appearance: none;
@@ -78,15 +70,11 @@
     border: none;
     border-radius: 4px;
     margin-left: 5px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #EA0055;
-    line-height: 19px;
   }
   
-  .form-container form a:hover  {
-    background-color: #FFD113;
-    color: #140F29;
+  .form-container input[type="submit"]:hover  {
+    background-color: #EA0055;
+    color: #fff;
   }
   
   .form-text  {
@@ -161,3 +149,4 @@
     margin-left: 5px;
     border-color: #fff;
   }
+  

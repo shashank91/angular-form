@@ -32,6 +32,13 @@ export class WishCardComponent implements OnInit {
     this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + this.form.value.username);
   }
 
+  shareOnFb() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + 'http://jubileehills.info/card/' + this.form.value.username,
+        'facebook-share-dialog',
+        'width=800,height=600'
+    );
+  }
+
   sanitizeUrl(url: string) {
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }
