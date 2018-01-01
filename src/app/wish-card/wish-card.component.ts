@@ -16,6 +16,13 @@ window.addEventListener('resize', function()  {
 }, false);
 
 function updateViews()  {
+  if(!is_landscape)  {
+      if (is_keyboard)  {
+        document.getElementsByClassName("overlay")[0].classList.add('keyboard');
+    }  else  {
+        document.getElementsByClassName("overlay")[0].classList.remove('keyboard');
+    }
+  }
   
 }
 
