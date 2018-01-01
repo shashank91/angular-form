@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import {DomSanitizer} from '@angular/platform-browser';
+declare var jquery: any;
+declare var $: any;
 
 var is_keyboard = false;
 var is_landscape = false;
