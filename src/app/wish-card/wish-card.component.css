@@ -3,7 +3,7 @@
     height: 100%;
     min-height: 100%;
     margin: auto;
-    overflow: hidden;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@
   .card-container  {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     max-height: 700px;
     max-width: 400px;
@@ -41,17 +41,25 @@
     font-size: 18px;
     margin-bottom: 20px;
   }
+
+  .card-img  {
+    text-align: center;
+  }
   
   .card-img img  {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
+    margin: auto;
   }
   
   .form-container  {
     padding: 10px;
     width: 100%;
     text-align: center;
-    height: 80px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
   }
   
   .form-container input[type="text"]  {
@@ -70,11 +78,13 @@
     border: none;
     border-radius: 4px;
     margin-left: 5px;
+    background-color: #EA0055;
+    color: #fff;
   }
   
   .form-container input[type="submit"]:hover  {
-    background-color: #EA0055;
-    color: #fff;
+    background-color: #FFD113;
+    color: #140F29;
   }
   
   .form-text  {
@@ -86,8 +96,8 @@
   .credits  {
     color: #fff;
     font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: #eee;
   }
   
@@ -99,16 +109,18 @@
   .credits a:hover  {
     text-decoration: underline;
   }
-  
-  .citations  {
-    color: #fff;
-    font-size: 14px;
-    visibility: hidden;
+
+  .another-card  {
+    padding-top: 5px;
   }
-  
-  .citations-container  {
-    width: 100%;
-    text-align: center;
+
+  .another-card a  {
+    color: #eee;
+    text-decoration: none;
+  }
+
+  .another-card a:hover  {
+    text-decoration: underline;
   }
   
   .fa-heart  {

@@ -3,6 +3,20 @@ import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import {DomSanitizer} from '@angular/platform-browser';
 
+var is_keyboard = false;
+var is_landscape = false;
+var initial_screen_size = window.innerHeight;
+
+window.addEventListener('resize', function()  {
+  is_keyboard = (window.innerHeight < initial_screen_size);
+  is_landscape = (screen.height < screen.width);
+  updateViews();
+}, false);
+
+function updateViews()  {
+  
+}
+
 @Component({
   selector: 'app-wish-card',
   templateUrl: './wish-card.component.html',
