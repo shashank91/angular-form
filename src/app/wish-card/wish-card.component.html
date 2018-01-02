@@ -18,51 +18,52 @@
         <a href="whatsapp://send?text=http://jubileehills.info/card/{{this.form.value.username}}" data-action="share/whatsapp/share">SEND</a>
       </form>
     </div> -->
-  </div>
-  <div class="overlay">
-    <div class="card-author">
-      From
-      <br> {{ username }}
-    </div>
-    <div class="form-container" *ngIf="createCard">
-      <div class="form-text">
-        Personalize this card and send to your friends.
+    <div class="overlay">
+      <div class="card-author">
+        From
+        <br> {{ username }}
       </div>
-      <form [formGroup]="form">
-        <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()"
-          placeholder="Enter your name here">
-        <input type="submit" (click)="shareCard()" value="Submit">
-      </form>
-      <div class="credits">
-        Made with
-        <i class="fa fa-heart"></i> by
-        <a href="http://greythinklabs.com">GreyThink Labs</a>
+      <div class="form-container" *ngIf="createCard">
+        <div class="form-text">
+          Personalize this card and send to your friends.
+        </div>
+        <form [formGroup]="form">
+          <input type="text" name="sender-name" id="sender-name" formControlName="username" (keyup)="newSender()" (click)="newSender()"
+            placeholder="Enter your name here">
+          <input type="submit" (click)="shareCard()" value="Submit">
+        </form>
+        <div class="credits">
+          Made with
+          <i class="fa fa-heart"></i> by
+          <a href="http://greythinklabs.com">GreyThink Labs</a>
+        </div>
       </div>
-    </div>
     
-    <div class="form-container" *ngIf="!createCard">
-      <div class="form-text">
-        Share on Whatsapp and Facebook
-      </div>
-      <div class="share-buttons">
-        <div class="whatsapp-share">
-          <a [href]="cardUrl" data-action="share/whatsapp/share">
-            <button>
-              <i class="fa fa-whatsapp"></i> Whatsapp</button>
-          </a>
+      <div class="form-container" *ngIf="!createCard">
+        <div class="form-text">
+          Share on Whatsapp and Facebook
         </div>
-        <div class="fb-share">
-          <a>
-            <button (click)="shareOnFb()">
-              <i class="fa fa-facebook"></i> Facebook</button>
-          </a>
+        <div class="share-buttons">
+          <div class="whatsapp-share">
+            <a [href]="cardUrl" data-action="share/whatsapp/share">
+              <button>
+                <i class="fa fa-whatsapp"></i> Whatsapp</button>
+            </a>
+          </div>
+          <div class="fb-share">
+            <a>
+              <button (click)="shareOnFb()">
+                <i class="fa fa-facebook"></i> Facebook</button>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="credits">
-        Made with
-        <i class="fa fa-heart"></i> by
-        <a href="http://greythinklabs.com">GreyThink Labs</a>
+        <div class="credits">
+          Made with
+          <i class="fa fa-heart"></i> by
+          <a href="http://greythinklabs.com">GreyThink Labs</a>
+        </div>
       </div>
     </div>
   </div>
+  
 </div>
