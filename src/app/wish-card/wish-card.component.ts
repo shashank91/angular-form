@@ -52,11 +52,12 @@ export class WishCardComponent implements OnInit {
 
   shareCard() {
     this.createCard = false;
-    this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + this.form.value.username);
+    this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + encodeURI(this.form.value.username));
+    console.log(this.cardUrl);
   }
 
   shareOnFb() {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + 'http://jubileehills.info/card/' + this.form.value.username,
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + 'http://jubileehills.info/card/' + encodeURI(this.form.value.username),
         'facebook-share-dialog',
         'width=800,height=600'
     );
