@@ -49,14 +49,16 @@ export class WishCardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.username = this.route.snapshot.paramMap.get('username');
+    if (this.route.snapshot.paramMap.get('username')) {
+      this.username = this.route.snapshot.paramMap.get('username').split('wishcardstringsubstitute').join(' ');
+    }
     console.log(this.username);
   }
 
   shareCard() {
     this.createCard = false;
-    this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + encodeURI(this.form.value.username));
-    console.log(this.cardUrl);
+    const username = this.form.value.username.replace(/\s/g, 'wishcardstringsubstitute');
+    this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + username);
   }
 
   shareOnFb() {
@@ -69,13 +71,18 @@ export class WishCardComponent implements OnInit {
   sanitizeUrl(url: string) {
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }
-
+  replaceAll(str, term, replacement) {
+    return str.replace(new RegExp(term, 'g'), replacement);
+  }
 
   newSender() {
     this.username = this.form.value.username;
 
     if (this.username === '') {
-      this.username = this.route.snapshot.paramMap.get('username');
+      if (this.route.snapshot.paramMap.get('username')) {
+        this.username = this.route.snapshot.paramMap.get('username').split('wishcardstringsubstitute').join(' ');
+      }
+        console.log(this.username);
     }
   }
 
