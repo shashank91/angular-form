@@ -5,6 +5,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 declare var jquery: any;
 declare var $: any;
 
+
+if(screen.width <=767)  {
 var is_keyboard = false;
 var is_landscape = false;
 var initial_screen_size = window.innerHeight;
@@ -14,6 +16,7 @@ window.addEventListener('resize', function()  {
   is_landscape = (screen.height < screen.width);
   updateViews();
 }, false);
+}
 
 function updateViews()  {
   if(!is_landscape)  {
