@@ -81,7 +81,7 @@ export class WishCardComponent implements OnInit {
 
     if (this.username === '') {
       if (this.route.snapshot.paramMap.get('username')) {
-        this.username = this.route.snapshot.paramMap.get('username').split('wishcardstringsubstitute').join(' ');
+        this.username = this.route.snapshot.paramMap.get('username').split('_').join(' ');
       }
         console.log(this.username);
     }
