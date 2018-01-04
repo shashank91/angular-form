@@ -57,8 +57,9 @@ export class WishCardComponent implements OnInit {
 
   shareCard() {
     this.createCard = false;
-    const username = this.form.value.username.replace(/\s/g, 'wishcardstringsubstitute');
+    const username = this.form.value.username.replace(/\s/g, '_');
     this.cardUrl = this.sanitizeUrl('whatsapp://send?text=http://jubileehills.info/card/' + username);
+    console.log(this.cardUrl);
   }
 
   shareOnFb() {
